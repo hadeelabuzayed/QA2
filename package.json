@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "cypress": "^12.17.4"
+    "cypress": "^13.2.0",
+    "moment": "^2.29.4"
   }
 }
