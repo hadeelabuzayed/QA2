@@ -7,7 +7,7 @@ beforeEach(() => {
 });
 describe('presentation 2', () => {
     it('make sure the departure date is set to be today date + 1', () => {
-        const tomorrow = moment().add(1, 'day');
+        const tomorrow = moment().add(1,'day');
         const formatTomorrow = tomorrow.format('MMMMD dddd')
         cy.get('[data-testid="FlightSearchBox__FromDateButton"]')
             .invoke('text')
@@ -17,10 +17,10 @@ describe('presentation 2', () => {
     });
     it('make sure the departure date is set to be today date + 2', () => {
 
-        const afterTomorrow = moment().add(2, 'day');
+        const afterTomorrow = moment().add(2,'day');
         const formatTomorrow = afterTomorrow.format('MMMMDdddd');
         cy.get('[data-testid="FlightSearchBox__ToDateButton"]').invoke('text').should('equal', formatTomorrow)
-
+        
     });
     it('flight class is set to be Economy by default', () => {
         cy.get('.sc-jWxkHr').invoke('text').should('include', 'Economy')
