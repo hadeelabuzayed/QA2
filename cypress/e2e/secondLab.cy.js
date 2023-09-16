@@ -8,6 +8,7 @@ Cypress.on("uncaught:exception", (err, runnable) => {
 
 beforeEach(() => {
     cy.visit("https://www.almosafer.com/en");
+    cy.get('.cta__saudi').click();
 });
 
 describe('almosafer lab 2', () => {
